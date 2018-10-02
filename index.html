@@ -1,0 +1,111 @@
+<!doctype html>
+
+<html lang="en">
+  
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <title>Train Schedule</title>
+
+    <!-- ALL style links-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville" rel="stylesheet">
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <!-- firebase-->
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    
+    <!--moment.ms-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="row banner">
+        <div class="col-sm-8">
+          <h1>Passenger Service Schedule</h1>
+          <h3>current time: <span id="timer"></span></h3>
+        </div>
+
+        <div class="col-sm-4">
+          <img id="trainGiphy" src="https://media.giphy.com/media/TlK63EDww4g4tXUd0gE/giphy.gif?cid=3640f6095bad6a9f6e6a46522ed72e84" alt="Train">
+        </div>
+      </div>      
+
+
+      <div class="schedule">
+
+          <div class="card border-info">
+            <h6 class="card-header bg-info rounded text-white">Current Train Schedule</h6>
+
+            <div class="card-body">
+              <table class="table" id="train-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Train Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td div="trainName"></th>
+                    <td div="dest"></td>
+                    <td div="freq"></td>
+                    <td div="next"></td>
+                    <td div="away"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+      </div>
+
+      <div class="addTrain">
+          <div class="card border-info">
+              <h6 class="card-header bg-info rounded text-white">Add Train</h6>
+
+              <div class="card-body">
+  
+                <form role="form">
+                    <div class="form-group row">
+                      <label for="add-name">Train Name:</label>
+                      <input class="form-control form-control-sm" id="add-name" type="text">
+                    </div>
+                    <div class="form-group row">
+                      <label for="add-dest">Destination:</label>
+                      <input class="form-control form-control-sm" id="add-dest" type="text">
+                    </div>
+                    <div class="form-group row">
+                      <label for="add-next">First Train Time (HH:MM AM/PM)</label>
+                      <input class="form-control form-control-sm" id="add-next" type="time">
+                    </div>
+                    <div class="form-group row">
+                      <label for="add-freq">Frequency (min)</label>
+                      <input class="form-control form-control-sm" id="add-freq" type="number">
+                    </div>
+                    <button class="btn btn-info" id="add-train" type="submit">Submit</button>
+            
+                </form>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.2/firebase.js"></script>
+    <script src="assets/javascript/trains.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+body {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.banner {
+    margin: auto;
+    margin-top: 10px;
+    background: #ed6a5a;
+    height: 222px;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+h1, h3 {
+  padding-top: 10px;
+  text-shadow: #e0e0e0 1px 1px 0;
+}
+
+#timer {
+  font-size: 55px;
+}
+
+#trainGiphy {
+  float: left;
+  width: 80%;
+}
+
+.schedule {
+  padding-top: 20px;
+}
+
+.table td, .table th {
+  border-top: none;
+}
+
+.addTrain {
+  padding: 20px 0px 20px 0px;
+}
+
+.form-group {
+  padding: 0px 15px 0px 15px;
+}
